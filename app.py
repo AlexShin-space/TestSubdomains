@@ -1,7 +1,12 @@
 from flask import Flask
+from flask import request
 
 app = Flask(__name__)
-app.config['SERVER_NAME'] = 'buytogo.space'  # Or yourdomain.onrender.com in production
+#app.config['SERVER_NAME'] = 'buytogo.space'  # Or yourdomain.onrender.com in production
+
+@app.before_request
+def debug_host():
+    print("Host header:", request.host)
 
 @app.route('/')
 def main_index():
