@@ -1,7 +1,7 @@
 from flask import Flask
 
 app = Flask(__name__)
-app.config['SERVER_NAME'] = 'domain-testing-server-for-landing-business.onrender.com'  # Or yourdomain.onrender.com in production
+app.config['SERVER_NAME'] = 'buytogo.space'  # Or yourdomain.onrender.com in production
 
 @app.route('/')
 def main_index():
